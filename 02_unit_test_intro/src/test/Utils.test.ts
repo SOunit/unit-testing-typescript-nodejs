@@ -32,4 +32,29 @@ describe("Utils test suite", () => {
     };
     expect(parsedUrl.query).toEqual(expectedQuery);
   });
+
+  test("invalid url", () => {
+    const expectError = () => {
+      Utils.parseUrl("");
+    };
+
+    expect(expectError).toThrowError("Empty URL");
+  });
+
+  test("invalid url with function", () => {
+    function expectError() {
+      Utils.parseUrl("");
+    }
+
+    expect(expectError).toThrowError("Empty URL");
+  });
+
+  test("invalid url with try / catch", () => {
+    try {
+      Utils.parseUrl("");
+    } catch (err) {
+      expect(err).toBeInstanceOf(Error);
+      expect(err).toHaveProperty("message", "Empty URL");
+    }
+  });
 });

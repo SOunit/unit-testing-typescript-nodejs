@@ -9,5 +9,5 @@ module.exports = {
   moduleFileExtensions: [...defaults.moduleFileExtensions, "ts", "tsx"],
   verbose: true,
   collectCoverage: true,
-  collectCoverageFrom: ["**/*.{js,jsx}"],
+  collectCoverageFrom: ["<rootDir>/src/app/**/*.ts"],
 };
