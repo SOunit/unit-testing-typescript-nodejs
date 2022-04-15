@@ -8,4 +8,6 @@ module.exports = {
   testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.[jt]sx?$",
   moduleFileExtensions: [...defaults.moduleFileExtensions, "ts", "tsx"],
   verbose: true,
+  collectCoverage: true,
+  collectCoverageFrom: ["**/*.{js,jsx}"],
 };
