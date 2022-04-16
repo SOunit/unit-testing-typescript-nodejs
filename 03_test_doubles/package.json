@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch",
+    "test": "jest --watchAll",
     "start": "ts-node src/app/Launcher.ts"
   },
   "repository": {
@@ -21,12 +21,14 @@
   "devDependencies": {
     "@types/jest": "^26.0.24",
     "@types/node": "^14.0.27",
+    "babel-jest": "^27.5.1",
     "jest": "^26.2.2",
     "ts-jest": "^26.1.4",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
   },
   "dependencies": {
+    "@types/nedb": "^1.8.12",
     "nedb": "^1.8.0"
   }
 }
